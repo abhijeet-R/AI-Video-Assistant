@@ -8,15 +8,15 @@ This project was built using **Python, Streamlit, LangChain, Whisper, Mistral AI
 
 ## Features
 
-* 🎥 Process YouTube videos or local audio/video files
-* 📝 Generate accurate meeting transcripts with Whisper
-* 🌐 Hinglish transcription support using Sarvam AI
-* 📋 Create concise AI-generated meeting summaries
-* 🏷️ Automatically generate meeting titles
-* ✅ Extract action items
-* 🔑 Identify key decisions
-* ❓ Highlight unanswered questions and follow-ups
-* 💬 Chat with the meeting transcript using RAG
+*  Process YouTube videos or local audio/video files
+*  Generate accurate meeting transcripts with Whisper
+*  Hinglish transcription support using Sarvam AI
+*  Create concise AI-generated meeting summaries
+*  Automatically generate meeting titles
+*  Extract action items
+*  Identify key decisions
+*  Highlight unanswered questions and follow-ups
+*  Chat with the meeting transcript using RAG
 
 ---
 
@@ -43,51 +43,19 @@ The application follows a simple pipeline:
 
 ### AI & LLM
 
-* OpenAI Whisper
-* Mistral AI
+* OpenAI Whisper (Runs Locally)
+* Mistral AI (API Key Required)
+* Sarvam AI (API Key Required)
 * LangChain
 
 ### RAG
 
 * ChromaDB
 * HuggingFace Embeddings
-* Sentence Transformers
-
-### Audio Processing
-
-* yt-dlp
-* pydub
-* FFmpeg
 
 ### Language
 
 * Python
-
----
-
-## Project Structure
-
-```
-AI-Video-Assistant/
-│
-├── app.py
-├── main.py
-├── requirements.txt
-│
-├── core/
-│   ├── extractor.py
-│   ├── rag_engine.py
-│   ├── summarizer.py
-│   ├── transcriber.py
-│   └── vector_store.py
-│
-├── utils/
-│   └── audio_processor.py
-│
-├── downloads/
-├── vector_db/
-└── README.md
-```
 
 ---
 
@@ -126,23 +94,6 @@ Install the required packages.
 uv pip install -r requirements.txt
 ```
 
-
-## FFmpeg
-
-This project uses FFmpeg for audio conversion.
-
-Download FFmpeg from:
-
-https://ffmpeg.org/download.html
-
-Make sure FFmpeg is available in your system PATH.
-
-Verify the installation:
-
-```bash
-ffmpeg -version
-```
-
 ---
 
 ## Running the Application
@@ -177,7 +128,6 @@ meeting.mp3
 
 Some features I'd like to add in the future include:
 
-* Speaker diarization
 * Support for additional languages
 * Export summaries as PDF
 * Meeting history and search
